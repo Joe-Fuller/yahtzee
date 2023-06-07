@@ -5,7 +5,9 @@ export default function Scorecard({ scorecard }) {
     <div className="text-center">
       <p>Score</p>
       {Object.keys(scorecard).map((name) => {
-        return <Category name={name} score={scorecard[name]}></Category>;
+        return (
+          <Category name={name} score={scorecard[name]} key={name}></Category>
+        );
       })}
     </div>
   );
