@@ -18,6 +18,7 @@ export default function Scorecard() {
       <Category name="Large Straight"></Category>
       <Category name="Yahtzee"></Category>
       <Category name="Chance"></Category>
+      <Category name="Total"></Category>
     </div>
   );
 }
