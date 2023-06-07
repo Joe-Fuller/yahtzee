@@ -12,7 +12,6 @@ export default function Home() {
     <main>
       <h1 className="text-center text-3xl">YAHTZEE</h1>
       <Scorecard></Scorecard>
-      <Dice value={1}></Dice>
       <DiceManager dice={dice} setDice={setDice}></DiceManager>
     </main>
   );
