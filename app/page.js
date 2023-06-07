@@ -26,7 +26,11 @@ export default function Home() {
   return (
     <main>
       <h1 className="text-center text-3xl">YAHTZEE</h1>
-      <Scorecard scorecard={scorecard}></Scorecard>
+      <Scorecard
+        scorecard={scorecard}
+        setScorecard={setScorecard}
+        dice={dice}
+      ></Scorecard>
       <DiceManager dice={dice} setDice={setDice}></DiceManager>
     </main>
   );
