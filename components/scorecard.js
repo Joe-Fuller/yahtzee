@@ -9,18 +9,20 @@ export default function Scorecard({ scorecard, setScorecard, dice }) {
   }
 
   return (
-    <div className="text-center">
-      <p>Score</p>
-      {Object.keys(scorecard).map((name) => {
-        return (
-          <Category
-            name={name}
-            score={scorecard[name]}
-            key={name}
-            scoreCategory={scoreCategory}
-          ></Category>
-        );
-      })}
+    <div className="flex justify-center">
+      <div className="text-center">
+        <p>Score</p>
+        {Object.keys(scorecard).map((name) => {
+          return (
+            <Category
+              name={name}
+              score={scorecard[name]}
+              key={name}
+              scoreCategory={scoreCategory}
+            ></Category>
+          );
+        })}
+      </div>
     </div>
   );
 }
