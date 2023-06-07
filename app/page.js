@@ -1,7 +1,6 @@
 "use client";
 
 import Scorecard from "@/components/scorecard";
-import Dice from "@/components/dice";
 import DiceManager from "@/components/diceManager";
 import { useState } from "react";
 
