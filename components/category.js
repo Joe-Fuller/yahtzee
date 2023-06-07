@@ -1,4 +1,4 @@
-export default function Category({ name, score = 0 }) {
+export default function Category({ name, score }) {
   return (
     <div className="grid grid-cols-2">
       <p>{name}</p>
