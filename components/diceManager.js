@@ -12,7 +12,12 @@ export default function DiceManager({ dice, setDice }) {
   return (
     <div className="flex justify-center">
       <div className="w-6/12">
-        <button onClick={rollDice}>Roll!</button>
+        <div className="flex justify-center">
+          {" "}
+          <button className="text-3xl" onClick={rollDice}>
+            Roll!
+          </button>
+        </div>
         <div className="flex justify-center">
           {dice.map((die, i) => {
             return <Dice key={i} value={die}></Dice>;
