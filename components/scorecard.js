@@ -1,6 +1,6 @@
 export default function Scorecard() {
   return (
-    <div>
+    <div className="text-center">
       <p>Score</p>
       <p>aces</p>
       <p>twos</p>
