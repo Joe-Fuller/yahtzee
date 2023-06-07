@@ -8,12 +8,15 @@ export default function DiceManager({ dice, setDice }) {
     }
     setDice(newDice);
   }
+
   return (
-    <div>
+    <div className="w-6/12">
       <button onClick={rollDice}>Roll!</button>
-      {dice.map((die, i) => {
-        return <Dice key={i} value={die}></Dice>;
-      })}
+      <div className="grid grid-cols-5">
+        {dice.map((die, i) => {
+          return <Dice key={i} value={die}></Dice>;
+        })}
+      </div>
     </div>
   );
 }
