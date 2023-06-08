@@ -5,6 +5,7 @@ export default function Scorecard({ scorecard, setScorecard, dice }) {
     const category = event.target.id;
     const newScorecard = { ...scorecard };
     newScorecard[category] = dice.reduce((prev, curr) => prev + curr, 0);
+    newScorecard["total"] += newScorecard[category];
     setScorecard(newScorecard);
   }
 

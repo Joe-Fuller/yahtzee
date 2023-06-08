@@ -21,6 +21,7 @@ export default function Home() {
     largeStraight: 0,
     yahtzee: 0,
     chance: 0,
+    total: 0,
   });
 
   return (
