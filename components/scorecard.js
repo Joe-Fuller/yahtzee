@@ -22,8 +22,8 @@ export default function Scorecard({
       let score = 0;
       let counts = {};
 
-      // if category is a number, just score that number
       switch (category) {
+        // if category is a number, just score that number
         case "aces":
           dice.forEach((die) => {
             if (die === 1) {
