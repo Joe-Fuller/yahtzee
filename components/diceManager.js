@@ -1,5 +1,4 @@
 import Dice from "./dice";
-import { useState } from "react";
 
 export default function DiceManager({
   dice,
@@ -46,6 +45,9 @@ export default function DiceManager({
               ></Dice>
             );
           })}
+        </div>
+        <div className="flex justify-center">
+          Rolls Remaining: {rollsRemaining}
         </div>
       </div>
     </div>
