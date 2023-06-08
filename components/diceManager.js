@@ -49,6 +49,9 @@ export default function DiceManager({
         <div className="flex justify-center">
           Rolls Remaining: {rollsRemaining}
         </div>
+        <div className="flex justify-center">
+          {rollsRemaining === 0 ? "Out of Rolls! Score your dice" : ""}
+        </div>
       </div>
     </div>
   );
