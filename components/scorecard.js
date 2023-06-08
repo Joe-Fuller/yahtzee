@@ -6,8 +6,13 @@ export default function Scorecard({
   dice,
   setRollsRemaining,
   setLocked,
+  started,
 }) {
   function scoreCategory(event) {
+    // dont let them score the starting dice
+    if (!started) {
+      return;
+    }
     // get the category name from the click
     const category = event.target.id;
 

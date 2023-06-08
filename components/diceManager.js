@@ -7,8 +7,13 @@ export default function DiceManager({
   setRollsRemaining,
   locked,
   setLocked,
+  started,
+  setStarted,
 }) {
   function rollDice() {
+    if (!started) {
+      setStarted(true);
+    }
     if (rollsRemaining > 0) {
       for (let times = 0; times < 1000; times++) {
         setTimeout(() => {
