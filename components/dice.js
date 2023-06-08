@@ -4,7 +4,7 @@ export default function Dice({ value, i, locked, setLocked }) {
   const path = `/dice/${value}.png`;
 
   function lock() {
-    const newLocked = locked;
+    const newLocked = [...locked];
     newLocked[i] = !locked[i];
     setLocked(newLocked);
   }
