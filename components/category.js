@@ -12,9 +12,13 @@ export default function Category({ name, score, scoreCategory }) {
   }
 
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 p-1">
       <p>{title(name)}</p>
-      <p onClick={scoreCategory} id={name} className="hover:bg-lightGreen">
+      <p
+        onClick={scoreCategory}
+        id={name}
+        className="text-center hover:bg-lightGreen cursor-pointer"
+      >
         {score}
       </p>
     </div>
