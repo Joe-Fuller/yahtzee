@@ -9,6 +9,7 @@ export default function DiceManager({
   setLocked,
   started,
   setStarted,
+  setScored,
 }) {
   function rollDice() {
     if (!started) {
@@ -28,6 +29,7 @@ export default function DiceManager({
       }
     }
     setRollsRemaining(rollsRemaining - 1);
+    setScored(false);
   }
 
   return (

@@ -7,10 +7,13 @@ export default function Scorecard({
   setRollsRemaining,
   setLocked,
   started,
+  scored,
+  setScored,
 }) {
   function scoreCategory(event) {
     // dont let them score the starting dice
-    if (!started) {
+    // or score a set of dice twice
+    if (!started || scored) {
       return;
     }
     // get the category name from the click
@@ -168,6 +171,7 @@ export default function Scorecard({
       setScorecard(newScorecard);
       setRollsRemaining(3);
       setLocked([false, false, false, false, false]);
+      setScored(true);
     }
   }
 
