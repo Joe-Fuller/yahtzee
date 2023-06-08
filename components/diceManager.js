@@ -37,7 +37,7 @@ export default function DiceManager({
       <div className="w-6/12">
         <div className="flex justify-center">
           <button
-            className="text-3xl bg-lightGreen rounded-md"
+            className="text-3xl bg-lightGreen rounded-md p-4"
             onClick={rollDice}
           >
             Roll!

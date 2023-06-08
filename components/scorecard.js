@@ -177,8 +177,8 @@ export default function Scorecard({
 
   return (
     <div className="flex justify-center">
-      <div className="text-center">
-        <p>Score</p>
+      <div className="text-center bg-darkGreen rounded-md p-4">
+        <p className="text-2xl p-4">Score</p>
         {Object.keys(scorecard).map((name) => {
           return (
             <Category
