@@ -3,10 +3,12 @@ import Category from "./category";
 export default function Scorecard({ scorecard, setScorecard, dice }) {
   function scoreCategory(event) {
     const category = event.target.id;
-    const newScorecard = { ...scorecard };
-    newScorecard[category] = dice.reduce((prev, curr) => prev + curr, 0);
-    newScorecard["total"] += newScorecard[category];
-    setScorecard(newScorecard);
+    if (scorecard[category] === 0 && category !== "total") {
+      const newScorecard = { ...scorecard };
+      newScorecard[category] = dice.reduce((prev, curr) => prev + curr, 0);
+      newScorecard["total"] += newScorecard[category];
+      setScorecard(newScorecard);
+    }
   }
 
   return (
