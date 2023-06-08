@@ -6,9 +6,9 @@ export default function DiceManager({
   setDice,
   rollsRemaining,
   setRollsRemaining,
+  locked,
+  setLocked,
 }) {
-  const [locked, setLocked] = useState([false, false, false, false, false]);
-
   function rollDice() {
     if (rollsRemaining > 0) {
       for (let times = 0; times < 1000; times++) {

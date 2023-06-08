@@ -5,6 +5,7 @@ export default function Scorecard({
   setScorecard,
   dice,
   setRollsRemaining,
+  setLocked,
 }) {
   function scoreCategory(event) {
     // get the category name from the click
@@ -161,6 +162,7 @@ export default function Scorecard({
       newScorecard["total"] += score;
       setScorecard(newScorecard);
       setRollsRemaining(3);
+      setLocked([false, false, false, false, false]);
     }
   }
 

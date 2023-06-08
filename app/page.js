@@ -24,6 +24,7 @@ export default function Home() {
     total: 0,
   });
   const [rollsRemaining, setRollsRemaining] = useState(3);
+  const [locked, setLocked] = useState([false, false, false, false, false]);
 
   return (
     <main>
@@ -33,12 +34,15 @@ export default function Home() {
         setScorecard={setScorecard}
         dice={dice}
         setRollsRemaining={setRollsRemaining}
+        setLocked={setLocked}
       ></Scorecard>
       <DiceManager
         dice={dice}
         setDice={setDice}
         rollsRemaining={rollsRemaining}
         setRollsRemaining={setRollsRemaining}
+        locked={locked}
+        setLocked={setLocked}
       ></DiceManager>
     </main>
   );
