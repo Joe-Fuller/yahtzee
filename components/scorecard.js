@@ -1,6 +1,11 @@
 import Category from "./category";
 
-export default function Scorecard({ scorecard, setScorecard, dice }) {
+export default function Scorecard({
+  scorecard,
+  setScorecard,
+  dice,
+  setRollsRemaining,
+}) {
   function scoreCategory(event) {
     // get the category name from the click
     const category = event.target.id;
@@ -155,6 +160,7 @@ export default function Scorecard({ scorecard, setScorecard, dice }) {
       newScorecard[category] = score;
       newScorecard["total"] += score;
       setScorecard(newScorecard);
+      setRollsRemaining(3);
     }
   }
 

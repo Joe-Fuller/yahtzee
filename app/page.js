@@ -23,6 +23,7 @@ export default function Home() {
     chance: 0,
     total: 0,
   });
+  const [rollsRemaining, setRollsRemaining] = useState(3);
 
   return (
     <main>
@@ -31,8 +32,14 @@ export default function Home() {
         scorecard={scorecard}
         setScorecard={setScorecard}
         dice={dice}
+        setRollsRemaining={setRollsRemaining}
       ></Scorecard>
-      <DiceManager dice={dice} setDice={setDice}></DiceManager>
+      <DiceManager
+        dice={dice}
+        setDice={setDice}
+        rollsRemaining={rollsRemaining}
+        setRollsRemaining={setRollsRemaining}
+      ></DiceManager>
     </main>
   );
 }
