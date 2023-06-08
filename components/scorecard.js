@@ -9,6 +9,8 @@ export default function Scorecard({
   started,
   scored,
   setScored,
+  beenScored,
+  setBeenScored,
 }) {
   function scoreCategory(event) {
     // dont let them score the starting dice
@@ -153,7 +155,7 @@ export default function Scorecard({
           break;
         case "yahtzee":
           let sum = dice.reduce((prev, curr) => {
-            prev + curr;
+            return prev + curr;
           });
           if (sum === 5 * dice[0]) {
             score = 50;
@@ -172,6 +174,7 @@ export default function Scorecard({
       setRollsRemaining(3);
       setLocked([false, false, false, false, false]);
       setScored(true);
+      beenScored[category] = true;
     }
   }
 
@@ -186,6 +189,7 @@ export default function Scorecard({
               score={scorecard[name]}
               key={name}
               scoreCategory={scoreCategory}
+              beenScored={beenScored}
             ></Category>
           );
         })}

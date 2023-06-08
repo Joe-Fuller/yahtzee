@@ -28,6 +28,23 @@ export default function Home() {
   const [locked, setLocked] = useState([false, false, false, false, false]);
   const [started, setStarted] = useState(false);
   const [scored, setScored] = useState(false);
+  const [beenScored, setBeenScored] = useState({
+    aces: false,
+    twos: false,
+    threes: false,
+    fours: false,
+    fives: false,
+    sixes: false,
+    bonus: false,
+    threeOfAKind: false,
+    fourOfAKind: false,
+    fullHouse: false,
+    smallStraight: false,
+    largeStraight: false,
+    yahtzee: false,
+    chance: false,
+    total: false,
+  });
 
   return (
     <main>
@@ -42,6 +59,8 @@ export default function Home() {
         started={started}
         scored={scored}
         setScored={setScored}
+        beenScored={beenScored}
+        setBeenScored={setBeenScored}
       ></Scorecard>
       <DiceManager
         dice={dice}

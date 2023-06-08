@@ -1,4 +1,4 @@
-export default function Category({ name, score, scoreCategory }) {
+export default function Category({ name, score, scoreCategory, beenScored }) {
   function title(word) {
     let output = word.slice(0, 1).toUpperCase();
     for (let i = 1; i < word.length - 1; i++) {
@@ -17,9 +17,13 @@ export default function Category({ name, score, scoreCategory }) {
       <p
         onClick={scoreCategory}
         id={name}
-        className="text-center hover:bg-lightGreen cursor-pointer"
+        className={
+          beenScored[name]
+            ? "text-center"
+            : "text-center hover:bg-lightGreen cursor-pointer"
+        }
       >
-        {score}
+        {beenScored[name] ? score : ""}
       </p>
     </div>
   );

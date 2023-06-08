@@ -10,7 +10,7 @@ export default function Dice({ value, i, locked, setLocked }) {
   }
 
   return (
-    <div className={!locked[i] ? "" : "bg-red-500 rounded-xl"} onClick={lock}>
+    <div className={!locked[i] ? "" : "bg-red-600 rounded-xl"} onClick={lock}>
       <Image src={path} width="80" height="80" alt={value}></Image>
     </div>
   );

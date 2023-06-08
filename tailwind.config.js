@@ -18,6 +18,7 @@ module.exports = {
         offWhite: "rgb(235, 242, 250)",
         darkGreen: "rgb(103, 148, 54)",
         lightGreen: "rgb(165, 190, 0)",
+        darkerGreen: "rgb(62,89,33)",
       },
     },
   },
