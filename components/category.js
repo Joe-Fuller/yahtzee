@@ -14,7 +14,7 @@ export default function Category({ name, score, scoreCategory }) {
   return (
     <div className="grid grid-cols-2">
       <p>{title(name)}</p>
-      <p onClick={scoreCategory} id={name}>
+      <p onClick={scoreCategory} id={name} className="hover:bg-lightGreen">
         {score}
       </p>
     </div>
