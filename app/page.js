@@ -5,7 +5,7 @@ import DiceManager from "@/components/diceManager";
 import { useState } from "react";
 
 export default function Home() {
-  const [dice, setDice] = useState([1, 2, 3, 4, 5]);
+  const [dice, setDice] = useState([6, 6, 6, 6, 6]);
   const [scorecard, setScorecard] = useState({
     aces: 0,
     twos: 0,
