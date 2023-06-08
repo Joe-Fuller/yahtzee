@@ -2,8 +2,10 @@ import Dice from "./dice";
 import { useState } from "react";
 
 export default function DiceManager({ dice, setDice }) {
+  const [locked, setLocked] = useState([false, false, false, false, false]);
+
   function rollDice() {
-    const newDice = [1, 2, 3, 4, 5];
+    const newDice = [...dice];
     for (let i = 0; i < 5; i++) {
       if (!locked[i]) {
         newDice[i] = Math.floor(Math.random() * 6) + 1;
@@ -11,8 +13,6 @@ export default function DiceManager({ dice, setDice }) {
     }
     setDice(newDice);
   }
-
-  const [locked, setLocked] = useState([false, false, false, false, false]);
 
   return (
     <div className="flex justify-center">
