@@ -5,13 +5,17 @@ export default function DiceManager({ dice, setDice }) {
   const [locked, setLocked] = useState([false, false, false, false, false]);
 
   function rollDice() {
-    const newDice = [...dice];
-    for (let i = 0; i < 5; i++) {
-      if (!locked[i]) {
-        newDice[i] = Math.floor(Math.random() * 6) + 1;
-      }
+    for (let times = 0; times < 1000; times++) {
+      setTimeout(() => {
+        const newDice = [...dice];
+        for (let i = 0; i < 5; i++) {
+          if (!locked[i]) {
+            newDice[i] = Math.floor(Math.random() * 6) + 1;
+          }
+        }
+        setDice(newDice);
+      }, 10);
     }
-    setDice(newDice);
   }
 
   return (
