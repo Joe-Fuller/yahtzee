@@ -3,6 +3,7 @@
 import Scorecard from "@/components/scorecard";
 import DiceManager from "@/components/diceManager";
 import { useState } from "react";
+import IntroPopup from "@/components/introPopup";
 
 export default function Home() {
   const [dice, setDice] = useState([6, 6, 6, 6, 6]);
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <main>
       <h1 className="text-center text-3xl">YAHTZEE</h1>
+      <IntroPopup></IntroPopup>
       <Scorecard
         scorecard={scorecard}
         setScorecard={setScorecard}
