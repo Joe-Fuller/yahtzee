@@ -177,6 +177,35 @@ export default function Scorecard({
       const newBeenScored = { ...beenScored };
       newBeenScored[category] = true;
       setBeenScored(newBeenScored);
+
+      if (
+        !newBeenScored["bonus"] &&
+        newBeenScored["aces"] &&
+        newBeenScored["twos"] &&
+        newBeenScored["threes"] &&
+        newBeenScored["fours"] &&
+        newBeenScored["fives"] &&
+        newBeenScored["sixes"]
+      ) {
+        const newScorecard = { ...scorecard };
+        if (
+          scorecard.aces +
+            scorecard.twos +
+            scorecard.threes +
+            scorecard.fours +
+            scorecard.fives +
+            scorecard.sixes >=
+          63
+        ) {
+          newScorecard["bonus"] = 35;
+        } else {
+          newScorecard["bonus"] = 0;
+        }
+        setScorecard(newScorecard);
+        const tempBeenScored = { ...newBeenScored };
+        tempBeenScored["bonus"] = true;
+        setBeenScored(tempBeenScored);
+      }
     }
   }
 
