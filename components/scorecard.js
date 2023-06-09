@@ -167,7 +167,7 @@ export default function Scorecard({
           });
           break;
       }
-      // newScorecard[category] = dice.reduce((prev, curr) => prev + curr, 0);
+
       newScorecard[category] = score;
       newScorecard["total"] += score;
       setScorecard(newScorecard);
