@@ -43,7 +43,7 @@ export default function Home() {
     largeStraight: false,
     yahtzee: false,
     chance: false,
-    total: false,
+    total: true,
   });
 
   return (

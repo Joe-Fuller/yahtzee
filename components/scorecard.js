@@ -167,13 +167,11 @@ export default function Scorecard({
 
       newScorecard[category] = score;
       newScorecard["total"] += score;
-      setScorecard(newScorecard);
       setRollsRemaining(3);
       setLocked([false, false, false, false, false]);
       setScored(true);
       const newBeenScored = { ...beenScored };
       newBeenScored[category] = true;
-      setBeenScored(newBeenScored);
 
       // bonus scoring
       if (
@@ -185,7 +183,6 @@ export default function Scorecard({
         newBeenScored["fives"] &&
         newBeenScored["sixes"]
       ) {
-        const newScorecard = { ...scorecard };
         if (
           scorecard.aces +
             scorecard.twos +
@@ -199,11 +196,10 @@ export default function Scorecard({
         } else {
           newScorecard["bonus"] = 0;
         }
-        setScorecard(newScorecard);
-        const tempBeenScored = { ...newBeenScored };
-        tempBeenScored["bonus"] = true;
-        setBeenScored(tempBeenScored);
+        newBeenScored["bonus"] = true;
       }
+      setScorecard(newScorecard);
+      setBeenScored(newBeenScored);
     }
   }
 
