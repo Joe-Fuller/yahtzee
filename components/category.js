@@ -18,7 +18,7 @@ export default function Category({ name, score, scoreCategory, beenScored }) {
         onClick={scoreCategory}
         id={name}
         className={
-          beenScored[name]
+          beenScored[name] || name === "bonus"
             ? "text-center"
             : "text-center hover:bg-lightGreen cursor-pointer"
         }
