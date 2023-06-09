@@ -154,10 +154,7 @@ export default function Scorecard({
           }
           break;
         case "yahtzee":
-          let sum = dice.reduce((prev, curr) => {
-            return prev + curr;
-          });
-          if (sum === 5 * dice[0]) {
+          if ((((dice[0] === dice[1]) === dice[2]) === dice[3]) === dice[4]) {
             score = 50;
           }
           break;
