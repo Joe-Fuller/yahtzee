@@ -174,7 +174,9 @@ export default function Scorecard({
       setRollsRemaining(3);
       setLocked([false, false, false, false, false]);
       setScored(true);
-      beenScored[category] = true;
+      const newBeenScored = { ...beenScored };
+      newBeenScored[category] = true;
+      setBeenScored(newBeenScored);
     }
   }
 
