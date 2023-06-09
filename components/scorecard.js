@@ -175,6 +175,7 @@ export default function Scorecard({
       newBeenScored[category] = true;
       setBeenScored(newBeenScored);
 
+      // bonus scoring
       if (
         !newBeenScored["bonus"] &&
         newBeenScored["aces"] &&
